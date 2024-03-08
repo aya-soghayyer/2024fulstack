@@ -23,6 +23,7 @@ async function displayData(e){
     let result = recipes.map(function (recipe){
             
         return `
+            <br/><br/>
             <h3>${recipe.title}</h3>
             <p>${recipe.publisher}</p>
             <a href="${recipe.source_url}" style="display: block"> click for the source</a>
@@ -38,3 +39,15 @@ async function displayData(e){
 }
 
 displayData()
+
+
+let nav = document.querySelector("nav")
+
+ window.onscroll= function(){
+    if(window.scrollY >200)
+    nav.classList.add("navv")
+    else {
+        nav.classList.remove("navv")
+    }
+}
+

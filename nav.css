@@ -1,0 +1,23 @@
+.navv {
+    /* text-transform: uppercase; */
+    text-align: center;
+    margin: auto;
+    padding-bottom: 5px;
+    background-color: tan;
+    border-radius: 5px;
+    padding: 6px;
+    display: inline-block
+    
+}
+nav{
+    position: fixed;
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 5px;
+    position: fixed;
+    display: inline;
+    justify-content: center;
+    word-spacing: 10px;
+    
+}
