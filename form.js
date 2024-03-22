@@ -12,22 +12,51 @@ formm.onsubmit = function (e) {
   };
   users.push(user);
   console.log(users);
+  console.log("hhhhh")
+  let username= localStorage.setItem('Username', user)
+  // let useremail =localStorage.setItem('Useremail', users.email)
+  // let userage =localStorage.setItem('Userage', users.age)
+  // let Userpass=localStorage.setItem('Userpass', users.password)
+  
   printInTable();
 };
 
-function printInTable() {
-  var data = "";
-  for (var i = 0; i < users.length; i++) {
-    data += `
-        <tr>
-        <td> ${users[i].name} </td>
-        <td>${users[i].email}</td>
-        <td>${users[i].age}</td>
-        <td>${users[i].password}</td>
+const printInTable=()=>{
+  let userInfo = localStorage.getItem('Users')
+  userInfo = userInfo.split(',')
+  const result = userInfo.map(user=>{
+    `<tr>
+        <td> ${user[0].name} </td>
+        <td>${user[1].email}</td>
+        <td>${user[2].age}</td>
+        <td>${user[3].password}</td>
     </tr>
         `;
-  }
-  tbody.innerHTML= data
+  }) 
+  tbody.innerHTML= result
 
 }
+
+
+
+
+
+// function printInTable() {
+//   var data = "";
+//   let userInfo = localStorage.getItem('Users')
+//   userInfo = userInfo.split(',')
+//   for (var i = 0; i < users.length; i++) {
+//     data += `
+//         <tr>
+//         <td> ${users[i].name} </td>
+//         <td>${users[i].email}</td>
+//         <td>${users[i].age}</td>
+//         <td>${users[i].password}</td>
+//     </tr>
+//         `;
+//   }
+//   tbody.innerHTML= data
+  
+
+// }
 
