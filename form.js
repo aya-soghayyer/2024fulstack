@@ -1,3 +1,5 @@
+// const { json } = require("express");
+
 var tbody = document.querySelector("tbody");
 var users = [];
 var formm = document.querySelector("form");
@@ -11,32 +13,37 @@ formm.onsubmit = function (e) {
     password: e.target.elements[3].value
   };
   users.push(user);
-  console.log(users);
-  console.log("hhhhh")
-  let username= localStorage.setItem('Username', user)
-  // let useremail =localStorage.setItem('Useremail', users.email)
-  // let userage =localStorage.setItem('Userage', users.age)
-  // let Userpass=localStorage.setItem('Userpass', users.password)
+  localStorage.setItem('Username', JSON.stringify(users))
   
-  printInTable();
+ printInTable();
 };
 
 const printInTable=()=>{
-  let userInfo = localStorage.getItem('Users')
-  userInfo = userInfo.split(',')
-  const result = userInfo.map(user=>{
-    `<tr>
-        <td> ${user[0].name} </td>
-        <td>${user[1].email}</td>
-        <td>${user[2].age}</td>
-        <td>${user[3].password}</td>
-    </tr>
-        `;
-  }) 
-  tbody.innerHTML= result
-
+  let userInfo =JSON.parse( localStorage.getItem('Username'))
+  console.log(userInfo)
+  console.log(` this is print in table: ${users[0].age}`)
+  // const result = userInfo.map(user=>{
+  //   `<tr>
+  //       <td> ${user[0].name} </td>
+  //       <td>${user[0].email}</td>
+  //       <td>${user[0].age}</td>
+  //       <td>${user[0].password}</td>
+  //   </tr>
+  //       `;
+  // }) 
+  let result =``
+  for(let i = 0 ; i<userInfo.length  ; i++){
+    result +=  `<tr>
+          <td> ${userInfo[i].name} </td>
+          <td>${userInfo[i].email}</td>
+          <td>${userInfo[i].age}</td>
+          <td>${userInfo[i].password}</td>
+       </tr>`
+  }
+  document.querySelector('tbody').innerHTML = result
 }
 
+printInTable()
 
 
 

@@ -1,0 +1,11 @@
+.product{
+    display: inline-block
+    
+}
+
+.products{
+    border-radius: 10px;
+    border-color: teal;
+    border-width: 2px;
+    border-style: dashed;
+}
