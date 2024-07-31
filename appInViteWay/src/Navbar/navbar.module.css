@@ -1,0 +1,19 @@
+.br{
+    background-color: teal;
+    color: tan;
+}
+
+
+.list{
+        display: flex;
+        justify-content: center;
+        align-content:space-around;
+    
+    
+}
+
+.white {
+    color: antiquewhite;
+    margin-left: 50px;
+}
+

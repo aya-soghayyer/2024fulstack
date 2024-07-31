@@ -1,0 +1,6 @@
+.border{
+    border: purple;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(200, 118, 222);
+}
