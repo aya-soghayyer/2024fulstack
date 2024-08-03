@@ -1,45 +1,97 @@
-import './App.css'
 
-import Navbar from './Navbar/Navbar';
-import Footer from './Footer/Footer';
-import { useState } from 'react';
+// import Navbar from './Navbar/Navbar';
+// import Footer from './Footer/Footer';
+// import { useState } from 'react';
+
+import { useState } from "react";
+
+
+
+const products = [
+  { 
+    id: 1,
+    namee: "Product 1",
+    desc: "this prod 1", 
+    thumbnail:'https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Helmet/thumbnail.png'
+    },
+  { 
+    id: 2,
+    namee: 'Product 2',
+    desc: "this prod 2", 
+    thumbnail:"https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/thumbnail.png"
+   },
+  { 
+    id: 3,
+    namee: 'Product 3',
+    desc: "this prod 3", 
+    thumbnail:'https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png'
+  },
+
+  
+];
 
 function App() {
-  // const [count, setCount] = useState(0)
-  // const mystyle= 
-  //   {color:'teal',
-  //     background:'tan'
-  //   }
+ 
+  const [products, setProducts] = useState([
+    { 
+      id: 1,
+      namee: "Product 1",
+      desc: "this prod 1", 
+      thumbnail:'https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Helmet/thumbnail.png'
+      },
+    { 
+      id: 2,
+      namee: 'Product 2',
+      desc: "this prod 2", 
+      thumbnail:"https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/thumbnail.png"
+     },
+    { 
+      id: 3,
+      namee: 'Product 3',
+      desc: "this prod 3", 
+      thumbnail:'https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png'
+    },
+  
+    
+  ]);
+  
 
-  let [count, setCount] = useState(0); 
-  let changeCounter = () => {
-    setCount(count + 1);
+  const addProduct = ()=> {
+    setProducts([...products,
+      { id: 4,
+      namee: 'Product 4',
+      desc: "this prod 4", 
+      thumbnail:"https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/thumbnail.png"
   }
+  ]);
+  }
+  const [userName, setUserName] = ('')
+  const handelChange = (e)=>{
+    setUserName(e.target.value)
+  }
+
+  const reset = ()=> {
+    setUserName('')
+  }
+
   return (
+
     <>
-    <button onClick={changeCounter}>click {count}</button>
+    <input type="text" id="na" name="user name" onChange={handelChange} value={userName}/>
+    <button onClick={reset}>reset input </button>
 
-    <Navbar count='2' age='30' />
-
-    <Navbar count='20'>
-    <div className="div">
-        <h1>second counter</h1>
-        <p>this is second coutner</p>
+    {
+      products.map(product => 
+        <div  key={product.id} className="producttt">
+        <h2>{product.namee}</h2>
+        <img src={product.thumbnail} alt="error" />
       </div>
-    </Navbar>
+      )
+    }
 
-    <Navbar>
-      <div className="div">
-        <h1>third counter</h1>
-        <p>this is third coutner</p>
-      </div>
-    </Navbar>
-    {/* <div >
-      <p> do not leave</p>
-    </div>
-      <h1>Hello world</h1>
-      <p>my name is aya</p>
-      <Footer /> */}
+    <button  onClick={addProduct}>add new product </button>
+
+    
     </>
 
   )
