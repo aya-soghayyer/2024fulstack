@@ -6,5 +6,5 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
--![alt text](image.png)
-- <video controls src="20240810-0630-41.8276220.mp4" title="Title"></video>
+- ![alt text](image.png)
+- ![alt text](ScreenRecording2024-08-10083108-ezgif.com-video-to-gif-converter.gif)
