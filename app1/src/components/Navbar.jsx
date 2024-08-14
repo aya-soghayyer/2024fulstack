@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './Navbar.css'
+
 function Navbar() {
   return (
 <>
@@ -24,7 +25,7 @@ function Navbar() {
         <li className="nav-item">
         <NavLink className="nav-link" to='/login' >Login </NavLink>
         </li>
-       
+      
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

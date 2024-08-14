@@ -1,0 +1,25 @@
+.clock{
+    display: inline-block;
+    background-image: linear-gradient(to left , #34a0a4, #52b69a, #76c893, #99d98c, #b5e48c );
+    color: antiquewhite;
+    font-size: 150px;
+    font-weight: 900;
+    border:solid #e4e8ea;
+    border-radius: 25px ;
+    box-shadow:0px 0px 15px  white;
+    padding: 10px;
+    margin-left: 33%;
+    font-family: "Chakra Petch", sans-serif;
+    font-style: normal;
+}
+h1{
+    margin-left: 33%;
+    font-size: 90px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #d3e2a5;
+}
+

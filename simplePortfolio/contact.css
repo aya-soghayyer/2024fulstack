@@ -1,0 +1,171 @@
+h1 {
+    font-size: calc(4.8rem, 20vw, 5.6rem);
+    /* (4.8rem, 20vw , 5.6rem); */
+}
+
+body {
+    background-color: #f56c96;
+}
+
+.box {
+    background-image: linear-gradient(to left, #18204f, #303765, #313866, #303765, #18204f);
+    margin: 100px auto;
+    width: 60%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+    height: auto;
+    padding: 20px 70px;
+    box-shadow: rgba(17, 17, 26, 0.378) 0px 4px 16px, rgba(17, 17, 26, 0.386) 0px 8px 24px, rgba(17, 17, 26, 0.424) 0px 16px 56px;
+}
+
+.nav {
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    width: 50%;
+
+}
+
+.space-lia {
+    margin-left: 50px;
+}
+
+.white {
+    color: antiquewhite;
+}
+
+.pink {
+    color: #f56c96;
+}
+
+.nav .list {
+    display: flex;
+    justify-content: center;
+    /* align-content:space-around; */
+}
+
+.info {
+    margin: auto;
+    padding: 20px 30px 80px;
+}
+
+button {
+    background-color: #f56c96;
+    color: rgb(243, 235, 221);
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    padding: 8px 17px;
+    font-size: 0.70rem;
+}
+
+.form-info h3 {
+    color: #f56c96;
+}
+
+.inp {
+    border-radius: 8px;
+    margin: 2px;
+    /* opacity: 0.5; */
+    background-color: rgba(80, 91, 136, 255);
+    padding: 8px;
+    text-transform: capitalize;
+    /* color: aliceblue; */
+    border: none;
+
+
+}
+
+::placeholder {
+    color: rgb(233, 238, 243);
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    color: rgb(229, 235, 241);
+    opacity: 3;
+}
+
+::-webkit-input-placeholder {
+    color: aliceblue;
+    opacity: 1;
+}
+
+.caption {
+    line-height: 4px;
+}
+
+.form-info {
+    margin-right: 100px;
+    /* margin-left: 10px; */
+    width: 50%;
+    height: 50%;
+}
+
+
+.follow,
+.contInfo {
+    color: #f56c96;
+    text-transform: capitalize;
+}
+
+.contInfo {
+    font-size: 17px;
+    width: 30%;
+
+}
+
+.contact {
+    width: 60%;
+}
+
+.social a {
+    text-decoration: none;
+    color: antiquewhite;
+    /* word-spacing: 5px;   */
+    /* margin: 5px; */
+
+}
+
+.space-a {
+    margin-left: 15px;
+
+}
+
+.font-a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+
+}
+
+
+.social {
+    display: flex;
+    justify-content: start;
+    text-align: left;
+    font-size: 12px;
+}
+
+.social-box {
+    margin-top: 10px;
+    line-height: 7px;
+}
+
+.contact-information {
+    line-height: 17px;
+    margin-bottom: 40px;
+}
+
+.parag {
+    font-size: 12px;
+}
+
+.nav a:hover{
+    color: #f56c96;
+}
