@@ -9,18 +9,21 @@ function App() {
   // console.log(import.meta.env.VITE_API_URL)
   const [Products, setProducts]= useState([])
   const [loader, setLoader] = useState(true)
+  const [error , setError] = useState("")
 
 
   const getProducts = async()=>{
     try {
-      const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/products?delay=5000`)
+      const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/products?delay=2000`)
       setProducts(data.products) 
-      setLoader(false)
-
     }catch(e)
     {
       console.log("catch error")
       console.log(e.message)
+      setError("error to load data")
+    }
+    finally{
+      setLoader(false)
     }
   }
  
@@ -34,12 +37,13 @@ function App() {
   }
   return (
     <>
-    {Products.map(product=>
+    {error??<p>{error}</p>}
+    {(Products.length>0)?Products.map(product=>
       <div className="product" key={product.id} >
         <h2>{product.title}</h2>
         <img src={product.thumbnail} alt="" />
       </div>
-    )}
+    ):<p>empty product</p>}
     </>
   )
 }
